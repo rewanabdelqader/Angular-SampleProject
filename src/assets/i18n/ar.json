@@ -1,0 +1,55 @@
+{
+  "treasuryDefinition": "تعريف الخزانة",
+  "english": "انجليزى",
+  "arabic":"عربي",
+  "selectLanguage": "اختر اللغة",
+  "filterByCurrency": "تصفية حسب العملة:",
+  "all": "الكل",
+  "itemsPerPage": "العناصر في الصفحة:",
+  "pagination": {
+    "of": "من",
+    "page": "صفحة"
+  },
+  "tableHeaders": {
+    "id": "الرقم",
+    "name": "الاسم",
+    "code": "الرمز",
+    "currency": "العملة",
+    "edit": "تعديل"
+  },
+  "AddNewTreasury": "إضافة خزانة جديدة",
+  "page": "صفحة",
+  "of": "من",
+  "matPaginator": {
+    "length": "إجمالي النتائج",
+    "pageSize": "النتائج في الصفحة",
+    "pageIndex": "رقم الصفحة",
+    "pageSizeOptions": "خيارات حجم الصفحة",
+    "pageChange": "onPageChange"
+  },
+  "paginationInfo": "الصفحة {{ pageInfo.pageInfo.pageNo }} من {{ totalPages }}",
+  "table": {
+    "theadDark": {
+      "id": "الرقم",
+      "name": "الاسم",
+      "code": "الرمز",
+      "currency": "العملة",
+      "edit": "تعديل",
+      "save": "حفظ",
+      "cancel": "إلغاء"
+    },
+    "tbody": {
+      "tdId": "الرقم",
+      "tdName": {
+        "label": "الاسم",
+        "input": "form-control",
+        "nameInput": "#nameInput"
+      },
+      "tdCode": "الرمز",
+      "tdCurrency": "العملة",
+      "tdEdit": "تعديل",
+      "tdSave": "حفظ",
+      "tdCancel": "إلغاء"
+    }
+  }
+}

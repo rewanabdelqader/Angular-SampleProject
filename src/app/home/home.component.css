@@ -1,0 +1,64 @@
+body {
+    margin: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.filter-container {
+    margin-bottom: 20px;
+}
+
+.add-button {
+    margin-bottom: 20px;
+}
+
+.edit-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.table th,
+.table td {
+    text-align: center;
+}
+.pagination-btn {
+    margin: 0 5px;
+  }
+  
+  .pagination-info {
+    margin-top: 10px;
+  }
+  body {
+    font-family: 'Arial', sans-serif;
+  }
+
+  .container-fluid {
+    margin-top: 20px;
+  }
+
+  .filter-section,
+  .language-section,
+  .button-section {
+    margin-bottom: 20px;
+  }
+
+  .pagination-info {
+    font-size: 14px;
+  }
+
+  #itemTable {
+    margin-top: 20px;
+  }
+  
+  

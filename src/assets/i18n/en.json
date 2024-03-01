@@ -1,0 +1,53 @@
+{
+  "treasuryDefinition": "Treasury Definition",
+  "selectLanguage": "Select Language",
+  "filterByCurrency": "Filter by Currency:",
+  "all": "All",
+  "itemsPerPage": "Items per page:",
+  "pagination": {
+    "of": "of",
+    "page": "Page"
+  },
+  "tableHeaders": {
+    "id": "ID",
+    "name": "Name",
+    "code": "Code",
+    "currency": "Currency",
+    "edit": "Edit"
+  },
+  "AddNewTreasury": "Add New Treasury",
+  "page": "Page",
+  "of": "of",
+  "matPaginator": {
+    "length": "Total Results",
+    "pageSize": "Results Per Page",
+    "pageIndex": "Page No",
+    "pageSizeOptions": "Page Size Options",
+    "pageChange": "onPageChange"
+  },
+  "paginationInfo": "Page {{ pageInfo.pageInfo.pageNo }} of {{ totalPages }}",
+  "table": {
+    "theadDark": {
+      "id": "ID",
+      "name": "Name",
+      "code": "Code",
+      "currency": "Currency",
+      "edit": "Edit",
+      "save": "Save",
+      "cancel": "Cancel"
+    },
+    "tbody": {
+      "tdId": "ID",
+      "tdName": {
+        "label": "Name",
+        "input": "form-control",
+        "nameInput": "#nameInput"
+      },
+      "tdCode": "Code",
+      "tdCurrency": "Currency",
+      "tdEdit": "Edit",
+      "tdSave": "Save",
+      "tdCancel": "Cancel"
+    }
+  }
+}

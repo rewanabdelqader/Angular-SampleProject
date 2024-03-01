@@ -1,0 +1,82 @@
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ 'treasuryDefinition' | translate }}</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <div class="container-fluid">
+    <h1 class="mt-4 display-4">{{ 'treasuryDefinition' | translate }}</h1>
+
+    <div class="row filter-section">
+      <div class="col-md-6">
+        <label for="filterSelect">{{ 'filterByCurrency' | translate }}</label>
+        <select class="form-select" id="filterSelect" #filterSelect (change)="onFilterChange(filterSelect.value)">
+          <option value="">{{ 'all' | translate }}</option>
+          <option value="1">سعودي ياااال</option>
+          <option value="2">جنية استرلينى</option>
+          <option value="4">دينار كويتي</option>
+          <option value="5">دولار امريكي</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row language-section">
+      <div class="col-md-6">
+        <label for="languageSelect">{{ 'selectLanguage' | translate }}</label>
+        <select class="form-select" id="languageSelect" (change)="translate($event)">
+          <option value="en">{{ 'english' | translate }}</option>
+          <option value="ar">{{ 'arabic' | translate }}</option>
+        </select>
+      </div>
+      <div class="col-md-6 button-section">
+        <button class="btn btn-primary mt-2" (click)="goToAddPage()">{{ 'AddNewTreasury' | translate }}</button>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <mat-paginator [length]="pageInfo.pageInfo.totalResults"
+        [pageSize]="pageInfo.pageInfo.resultsPerPage" [pageIndex]="pageInfo.pageInfo.pageNo - 1"
+        [pageSizeOptions]="pageSizeOptions" (page)="onPageChange($event)">
+      </mat-paginator>
+
+      <div class="pagination-info mt-2">
+        {{ 'pagination.page' | translate }} {{ pageInfo.pageInfo.pageNo }} {{ 'pagination.of' | translate }} {{ totalPages }}
+      </div>
+    </div>
+
+    <table class="table table-bordered" id="itemTable">
+      <thead class="thead-dark">
+        <tr>
+          <th>{{ 'tableHeaders.id' | translate }}</th>
+          <th>{{ 'tableHeaders.name' | translate }}</th>
+          <th>{{ 'tableHeaders.code' | translate }}</th>
+          <th>{{ 'tableHeaders.currency' | translate }}</th>
+          <th>{{ 'tableHeaders.edit' | translate }}</th>
+          <th *ngIf="isEditing">{{ 'tableHeaders.save' | translate }}</th>
+          <th *ngIf="isEditing">{{ 'tableHeaders.cancel' | translate }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let treasury of treasuryList | filter: filterValue">
+          <td>{{ treasury.id }}</td>
+          <td>
+            <label *ngIf="!isEditing || editingRow !== treasury.id">{{ treasury.name }}</label>
+            <input *ngIf="isEditing && editingRow === treasury.id" class="form-control" #nameInput />
+          </td>
+          <td>{{ treasury.code }}</td>
+          <td>{{ treasury.currency?.name }}</td>
+          <td>
+            <button class="btn btn-primary btn-sm" (click)="editRow(treasury.id)">{{ 'tableHeaders.edit' | translate }}</button>
+          </td>
+          <td *ngIf="isEditing && editingRow === treasury.id">
+            <button class="btn btn-success btn-sm" (click)="saveRow(treasury)">{{ 'tableHeaders.save' | translate }}</button>
+          </td>
+          <td *ngIf="isEditing && editingRow === treasury.id">
+            <button class="btn btn-secondary btn-sm" (click)="cancelEdit()">{{ 'tableHeaders.cancel' | translate }}</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
